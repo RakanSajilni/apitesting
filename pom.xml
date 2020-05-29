@@ -20,6 +20,17 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
+        <!-- JSON -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+
+
+
+
     </dependencies>
 
 </project>

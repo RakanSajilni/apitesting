@@ -2,11 +2,9 @@ package com.sajilni.api.entites;
 
 import lombok.Data;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
-@XmlRootElement
-public @Data
-class Message {
+@Data
+public class Message {
     private long id;
     private String message;
     private Date created;

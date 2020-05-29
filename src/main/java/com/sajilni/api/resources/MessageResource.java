@@ -1,4 +1,4 @@
-package com.sajilni.api;
+package com.sajilni.api.resources;
 
 import com.sajilni.api.entites.Message;
 import com.sajilni.api.service.MessageService;
@@ -15,15 +15,15 @@ public class MessageResource {
     MessageService messageService = new MessageService();
 
     @GET
-    @Produces(MediaType.APPLICATION_XML)
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Message> getMessages() {
         return messageService.getAllMessages();
     }
 
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_XML)
-    public Message getMessage(@PathParam("id") long id){
+    @Produces(MediaType.APPLICATION_JSON)
+    public Message getMessage(@PathParam("id") long id) {
         return messageService.getMessage(id);
     }
 
