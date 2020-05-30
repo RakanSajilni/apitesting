@@ -27,7 +27,7 @@ public class ProfileResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Profile addProfile(Profile profile){
+    public Profile addProfile(Profile profile) {
         return profileService.addProfile(profile);
     }
 
@@ -35,14 +35,14 @@ public class ProfileResource {
     @Path("/{profileName}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Profile updateProfile(@PathParam("profileName") String profileName, Profile profile){
+    public Profile updateProfile(@PathParam("profileName") String profileName, Profile profile) {
         profile.setProfileName(profileName);
         return profileService.updateProfile(profile);
     }
 
     @DELETE
     @Path("/{profileName}")
-    public void removeProfile(@PathParam("profileName") String profileName){
+    public void removeProfile(@PathParam("profileName") String profileName) {
         profileService.removeProfile(profileName);
     }
 

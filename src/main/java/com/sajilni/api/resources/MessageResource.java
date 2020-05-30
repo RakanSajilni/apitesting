@@ -27,23 +27,23 @@ public class MessageResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Message addMessage(Message message){
-      return messageService.addMessage(message);
+    public Message addMessage(Message message) {
+        return messageService.addMessage(message);
     }
 
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Message updateMessage(@PathParam("id") long id, Message message){
+    public Message updateMessage(@PathParam("id") long id, Message message) {
         message.setId(id);
         return messageService.updateMessage(message);
     }
 
     @DELETE
     @Path("/{id}")
-    public void removeMessage(@PathParam("id") long id){
-         messageService.removeMessage(id);
+    public void removeMessage(@PathParam("id") long id) {
+        messageService.removeMessage(id);
     }
 
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class ProfileService {
     private Map<String, Profile> profiles = DatabaseClass.getProfiles();
+
     public ProfileService() {
     }
 
@@ -21,18 +22,20 @@ public class ProfileService {
     }
 
     public Profile addProfile(Profile profile) {
-        profile.setId(profiles.size()+1);
-        profiles.put(profile.getProfileName(),profile);
+        profile.setId(profiles.size() + 1);
+        profiles.put(profile.getProfileName(), profile);
         return profile;
     }
-    public void removeProfile(String profileName){
+
+    public void removeProfile(String profileName) {
         profiles.remove(profileName);
     }
-    public Profile updateProfile(Profile profile){
-        if(profile.getProfileName().isEmpty()){
+
+    public Profile updateProfile(Profile profile) {
+        if (profile.getProfileName().isEmpty()) {
             return null;
         }
-        profiles.put(profile.getProfileName(),profile);
+        profiles.put(profile.getProfileName(), profile);
         return profile;
     }
 

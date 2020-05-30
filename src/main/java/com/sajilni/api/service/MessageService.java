@@ -22,18 +22,20 @@ public class MessageService {
     }
 
     public Message addMessage(Message message) {
-        message.setId(messages.size()+1);
-        messages.put(message.getId(),message);
+        message.setId(messages.size() + 1);
+        messages.put(message.getId(), message);
         return message;
     }
-    public void removeMessage(long id){
+
+    public void removeMessage(long id) {
         messages.remove(id);
     }
-    public Message updateMessage(Message message){
-        if(message.getId()<=0){
+
+    public Message updateMessage(Message message) {
+        if (message.getId() <= 0) {
             return null;
         }
-        messages.put(message.getId(),message);
+        messages.put(message.getId(), message);
         return message;
     }
 
