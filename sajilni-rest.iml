@@ -27,7 +27,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="Tomcat 7.0.96" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="Tomcat 10" level="application_server_libraries" />
     <orderEntry type="library" name="JAX-RS-2.1.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-bundle:1.18.3" level="project" />
     <orderEntry type="library" name="Maven: javax.ws.rs:jsr311-api:1.1.1" level="project" />

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+
 public class MessageService {
     private Map<Long, Message> messages = DatabaseClass.getMessages();
 
@@ -14,23 +15,22 @@ public class MessageService {
     }
 
     public List<Message> getAllMessages() {
-        return new ArrayList<>(messages.values());
+        return new ArrayList<Message>(messages.values());
     }
 
     public List<Message> getAllMessagesForYear(int year) {
         List<Message> messagesForYears = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
-        messages.values().forEach(message -> {
+        for(Message message : messages.values()){
             calendar.setTime(message.getCreated());
-            if (calendar.get(Calendar.YEAR) == year) {
+            if(calendar.get(Calendar.YEAR) == year)
                 messagesForYears.add(message);
-            }
-        });
+        }
         return messagesForYears;
     }
 
     public List<Message> getAllMessagesPaginated(int start, int size) {
-        List<Message> list = new ArrayList<>(messages.values());
+        List<Message> list = new ArrayList<Message>(messages.values());
         return list.subList(start, start + size);
     }
 
